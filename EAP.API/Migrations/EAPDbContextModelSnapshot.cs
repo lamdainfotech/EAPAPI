@@ -38,7 +38,8 @@ namespace EAP.API.Migrations
 
                     b.HasKey("AccountId");
 
-                    b.HasIndex("OwnerId");
+                    b.HasIndex("OwnerId")
+                        .IsUnique();
 
                     b.ToTable("Accounts");
                 });
@@ -71,8 +72,8 @@ namespace EAP.API.Migrations
             modelBuilder.Entity("EAP.Entity.Models.Accounts.Account", b =>
                 {
                     b.HasOne("EAP.Entity.Models.Owners.Owner", "Owner")
-                        .WithMany("Acounts")
-                        .HasForeignKey("OwnerId")
+                        .WithOne("Acounts")
+                        .HasForeignKey("EAP.Entity.Models.Accounts.Account", "OwnerId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
