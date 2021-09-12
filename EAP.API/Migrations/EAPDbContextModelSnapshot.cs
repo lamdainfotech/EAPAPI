@@ -18,6 +18,74 @@ namespace EAP.API.Migrations
                 .HasAnnotation("ProductVersion", "5.0.9")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("EAP.Entity.Models.Address.States", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnName("StateId")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Code")
+                        .HasMaxLength(2)
+                        .HasColumnType("nvarchar(2)");
+
+                    b.Property<int>("CountryId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("StateName")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("States", "Address");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CountryId = 152,
+                            StateName = "Province No. 1"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CountryId = 152,
+                            StateName = "Province No. 2"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CountryId = 152,
+                            StateName = "Province No. 3"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            CountryId = 152,
+                            StateName = "Gandaki"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            CountryId = 152,
+                            StateName = "Province No. 5"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            CountryId = 152,
+                            StateName = "Karnali"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            CountryId = 152,
+                            StateName = "PSudurpashchim"
+                        });
+                });
+
             modelBuilder.Entity("EAP.Entity.Models.Country.Countries", b =>
                 {
                     b.Property<int>("Id")

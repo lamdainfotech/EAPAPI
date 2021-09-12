@@ -1,4 +1,5 @@
 using EAP.Contracts.IRepositoty.Accounts;
+using EAP.Contracts.IRepositoty.AddressRepo;
 using EAP.Contracts.IRepositoty.CountryRepo;
 using EAP.Contracts.IRepositoty.Owners;
 
@@ -9,6 +10,7 @@ namespace EAP.Contracts.IRepositoty.Wrapper
         IOwnerRepo Owner { get; set; }
         IAccountRepo Account { get; set; }
         ICountryRepo country { get; set; }
+        IStatesRepo states { get; set; }
         void Save();
     }
 }
