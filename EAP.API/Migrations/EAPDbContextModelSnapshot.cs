@@ -18,6 +18,572 @@ namespace EAP.API.Migrations
                 .HasAnnotation("ProductVersion", "5.0.9")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("EAP.Entity.Models.Address.Districts", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnName("DistrictId")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("DistrictCode")
+                        .HasMaxLength(3)
+                        .HasColumnType("nvarchar(3)");
+
+                    b.Property<string>("DistrictName")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<int>("StateId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Districts", "Address");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            DistrictCode = "",
+                            DistrictName = "Bhojpur",
+                            StateId = 1
+                        },
+                        new
+                        {
+                            Id = 2,
+                            DistrictCode = "",
+                            DistrictName = "Dhankuta",
+                            StateId = 1
+                        },
+                        new
+                        {
+                            Id = 3,
+                            DistrictCode = "",
+                            DistrictName = "Ilam",
+                            StateId = 1
+                        },
+                        new
+                        {
+                            Id = 4,
+                            DistrictCode = "",
+                            DistrictName = "Jhapa",
+                            StateId = 1
+                        },
+                        new
+                        {
+                            Id = 5,
+                            DistrictCode = "",
+                            DistrictName = "Khotang",
+                            StateId = 1
+                        },
+                        new
+                        {
+                            Id = 6,
+                            DistrictCode = "",
+                            DistrictName = "Morang",
+                            StateId = 1
+                        },
+                        new
+                        {
+                            Id = 7,
+                            DistrictCode = "",
+                            DistrictName = "Okhaldhunga",
+                            StateId = 1
+                        },
+                        new
+                        {
+                            Id = 8,
+                            DistrictCode = "",
+                            DistrictName = "Panchthar",
+                            StateId = 1
+                        },
+                        new
+                        {
+                            Id = 9,
+                            DistrictCode = "",
+                            DistrictName = "Sankhuwasabha",
+                            StateId = 1
+                        },
+                        new
+                        {
+                            Id = 10,
+                            DistrictCode = "",
+                            DistrictName = "Solukhumbu",
+                            StateId = 1
+                        },
+                        new
+                        {
+                            Id = 11,
+                            DistrictCode = "",
+                            DistrictName = "Sunsari",
+                            StateId = 1
+                        },
+                        new
+                        {
+                            Id = 12,
+                            DistrictCode = "",
+                            DistrictName = "Taplejung",
+                            StateId = 1
+                        },
+                        new
+                        {
+                            Id = 13,
+                            DistrictCode = "",
+                            DistrictName = "Terhathum",
+                            StateId = 1
+                        },
+                        new
+                        {
+                            Id = 14,
+                            DistrictCode = "",
+                            DistrictName = "Udayapur",
+                            StateId = 1
+                        },
+                        new
+                        {
+                            Id = 15,
+                            DistrictCode = "",
+                            DistrictName = "Saptari",
+                            StateId = 2
+                        },
+                        new
+                        {
+                            Id = 16,
+                            DistrictCode = "",
+                            DistrictName = "Siraha",
+                            StateId = 2
+                        },
+                        new
+                        {
+                            Id = 17,
+                            DistrictCode = "",
+                            DistrictName = "Dhanusa",
+                            StateId = 2
+                        },
+                        new
+                        {
+                            Id = 18,
+                            DistrictCode = "",
+                            DistrictName = "Mahottari",
+                            StateId = 2
+                        },
+                        new
+                        {
+                            Id = 19,
+                            DistrictCode = "",
+                            DistrictName = "Sarlahi",
+                            StateId = 2
+                        },
+                        new
+                        {
+                            Id = 20,
+                            DistrictCode = "",
+                            DistrictName = "Bara",
+                            StateId = 2
+                        },
+                        new
+                        {
+                            Id = 21,
+                            DistrictCode = "",
+                            DistrictName = "Parsa",
+                            StateId = 2
+                        },
+                        new
+                        {
+                            Id = 22,
+                            DistrictCode = "",
+                            DistrictName = "Rautahat",
+                            StateId = 2
+                        },
+                        new
+                        {
+                            Id = 23,
+                            DistrictCode = "",
+                            DistrictName = "Sindhuli",
+                            StateId = 3
+                        },
+                        new
+                        {
+                            Id = 24,
+                            DistrictCode = "",
+                            DistrictName = "Ramechhap",
+                            StateId = 3
+                        },
+                        new
+                        {
+                            Id = 25,
+                            DistrictCode = "",
+                            DistrictName = "Dolakha",
+                            StateId = 3
+                        },
+                        new
+                        {
+                            Id = 26,
+                            DistrictCode = "",
+                            DistrictName = "Bhaktapur",
+                            StateId = 3
+                        },
+                        new
+                        {
+                            Id = 27,
+                            DistrictCode = "",
+                            DistrictName = "Dhading",
+                            StateId = 3
+                        },
+                        new
+                        {
+                            Id = 28,
+                            DistrictCode = "",
+                            DistrictName = "Kathmandu",
+                            StateId = 3
+                        },
+                        new
+                        {
+                            Id = 29,
+                            DistrictCode = "",
+                            DistrictName = "Kavrepalanchok",
+                            StateId = 3
+                        },
+                        new
+                        {
+                            Id = 30,
+                            DistrictCode = "",
+                            DistrictName = "Lalitpur",
+                            StateId = 3
+                        },
+                        new
+                        {
+                            Id = 31,
+                            DistrictCode = "",
+                            DistrictName = "Nuwakot",
+                            StateId = 3
+                        },
+                        new
+                        {
+                            Id = 32,
+                            DistrictCode = "",
+                            DistrictName = "Rasuwa",
+                            StateId = 3
+                        },
+                        new
+                        {
+                            Id = 33,
+                            DistrictCode = "",
+                            DistrictName = "Sindhupalchok",
+                            StateId = 3
+                        },
+                        new
+                        {
+                            Id = 34,
+                            DistrictCode = "",
+                            DistrictName = "Chitwan",
+                            StateId = 3
+                        },
+                        new
+                        {
+                            Id = 35,
+                            DistrictCode = "",
+                            DistrictName = "Makwanpur",
+                            StateId = 3
+                        },
+                        new
+                        {
+                            Id = 36,
+                            DistrictCode = "",
+                            DistrictName = "Baglung",
+                            StateId = 4
+                        },
+                        new
+                        {
+                            Id = 37,
+                            DistrictCode = "",
+                            DistrictName = "Gorkha",
+                            StateId = 4
+                        },
+                        new
+                        {
+                            Id = 38,
+                            DistrictCode = "",
+                            DistrictName = "Kaski",
+                            StateId = 4
+                        },
+                        new
+                        {
+                            Id = 39,
+                            DistrictCode = "",
+                            DistrictName = "Lamjung",
+                            StateId = 4
+                        },
+                        new
+                        {
+                            Id = 40,
+                            DistrictCode = "",
+                            DistrictName = "Manang",
+                            StateId = 4
+                        },
+                        new
+                        {
+                            Id = 41,
+                            DistrictCode = "",
+                            DistrictName = "Mustang",
+                            StateId = 4
+                        },
+                        new
+                        {
+                            Id = 42,
+                            DistrictCode = "",
+                            DistrictName = "Myagdi",
+                            StateId = 4
+                        },
+                        new
+                        {
+                            Id = 43,
+                            DistrictCode = "",
+                            DistrictName = "Nawalpur",
+                            StateId = 4
+                        },
+                        new
+                        {
+                            Id = 44,
+                            DistrictCode = "",
+                            DistrictName = "Parbat",
+                            StateId = 4
+                        },
+                        new
+                        {
+                            Id = 45,
+                            DistrictCode = "",
+                            DistrictName = "Syangja",
+                            StateId = 4
+                        },
+                        new
+                        {
+                            Id = 46,
+                            DistrictCode = "",
+                            DistrictName = "Tanahun",
+                            StateId = 4
+                        },
+                        new
+                        {
+                            Id = 47,
+                            DistrictCode = "",
+                            DistrictName = "Kapilvastu",
+                            StateId = 5
+                        },
+                        new
+                        {
+                            Id = 48,
+                            DistrictCode = "",
+                            DistrictName = "Parasi",
+                            StateId = 5
+                        },
+                        new
+                        {
+                            Id = 49,
+                            DistrictCode = "",
+                            DistrictName = "Rupandehi",
+                            StateId = 5
+                        },
+                        new
+                        {
+                            Id = 50,
+                            DistrictCode = "",
+                            DistrictName = "Arghakhanchi",
+                            StateId = 5
+                        },
+                        new
+                        {
+                            Id = 51,
+                            DistrictCode = "",
+                            DistrictName = "Gulmi",
+                            StateId = 5
+                        },
+                        new
+                        {
+                            Id = 52,
+                            DistrictCode = "",
+                            DistrictName = "Palpa",
+                            StateId = 5
+                        },
+                        new
+                        {
+                            Id = 53,
+                            DistrictCode = "",
+                            DistrictName = "Dang",
+                            StateId = 5
+                        },
+                        new
+                        {
+                            Id = 54,
+                            DistrictCode = "",
+                            DistrictName = "Pyuthan",
+                            StateId = 5
+                        },
+                        new
+                        {
+                            Id = 55,
+                            DistrictCode = "",
+                            DistrictName = "Rolpa",
+                            StateId = 5
+                        },
+                        new
+                        {
+                            Id = 56,
+                            DistrictCode = "",
+                            DistrictName = "Eastern Rukum",
+                            StateId = 5
+                        },
+                        new
+                        {
+                            Id = 57,
+                            DistrictCode = "",
+                            DistrictName = "Banke",
+                            StateId = 5
+                        },
+                        new
+                        {
+                            Id = 58,
+                            DistrictCode = "",
+                            DistrictName = "Bardiya",
+                            StateId = 5
+                        },
+                        new
+                        {
+                            Id = 59,
+                            DistrictCode = "",
+                            DistrictName = "Western Rukum",
+                            StateId = 6
+                        },
+                        new
+                        {
+                            Id = 60,
+                            DistrictCode = "",
+                            DistrictName = "Salyan",
+                            StateId = 6
+                        },
+                        new
+                        {
+                            Id = 61,
+                            DistrictCode = "",
+                            DistrictName = "Dolpa",
+                            StateId = 6
+                        },
+                        new
+                        {
+                            Id = 62,
+                            DistrictCode = "",
+                            DistrictName = "Humla",
+                            StateId = 6
+                        },
+                        new
+                        {
+                            Id = 63,
+                            DistrictCode = "",
+                            DistrictName = "Jumla",
+                            StateId = 6
+                        },
+                        new
+                        {
+                            Id = 64,
+                            DistrictCode = "",
+                            DistrictName = "Kalikot",
+                            StateId = 6
+                        },
+                        new
+                        {
+                            Id = 65,
+                            DistrictCode = "",
+                            DistrictName = "Mugu",
+                            StateId = 6
+                        },
+                        new
+                        {
+                            Id = 66,
+                            DistrictCode = "",
+                            DistrictName = "Surkhet",
+                            StateId = 6
+                        },
+                        new
+                        {
+                            Id = 67,
+                            DistrictCode = "",
+                            DistrictName = "Dailekh",
+                            StateId = 6
+                        },
+                        new
+                        {
+                            Id = 68,
+                            DistrictCode = "",
+                            DistrictName = "Jajarkot",
+                            StateId = 6
+                        },
+                        new
+                        {
+                            Id = 69,
+                            DistrictCode = "",
+                            DistrictName = "Kailali",
+                            StateId = 7
+                        },
+                        new
+                        {
+                            Id = 70,
+                            DistrictCode = "",
+                            DistrictName = "Achham",
+                            StateId = 7
+                        },
+                        new
+                        {
+                            Id = 71,
+                            DistrictCode = "",
+                            DistrictName = "Doti",
+                            StateId = 7
+                        },
+                        new
+                        {
+                            Id = 72,
+                            DistrictCode = "",
+                            DistrictName = "Bajhang",
+                            StateId = 7
+                        },
+                        new
+                        {
+                            Id = 73,
+                            DistrictCode = "",
+                            DistrictName = "Bajura",
+                            StateId = 7
+                        },
+                        new
+                        {
+                            Id = 74,
+                            DistrictCode = "",
+                            DistrictName = "Kanchanpur",
+                            StateId = 7
+                        },
+                        new
+                        {
+                            Id = 75,
+                            DistrictCode = "",
+                            DistrictName = "Dadeldhura",
+                            StateId = 7
+                        },
+                        new
+                        {
+                            Id = 76,
+                            DistrictCode = "",
+                            DistrictName = "Baitadi",
+                            StateId = 7
+                        },
+                        new
+                        {
+                            Id = 77,
+                            DistrictCode = "",
+                            DistrictName = "Darchula",
+                            StateId = 7
+                        });
+                });
+
             modelBuilder.Entity("EAP.Entity.Models.Address.States", b =>
                 {
                     b.Property<int>("Id")

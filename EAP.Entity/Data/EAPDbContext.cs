@@ -13,6 +13,7 @@ namespace EAP.Entity.Data
             : base(options)
         {
         }
+        public DbSet<Districts> Districts { get; set; }
         public DbSet<States> States { get; set; }
         public DbSet<Countries> Countries { get; set; }
         // public DbSet<Owner> Owners { get; set; }
@@ -25,7 +26,7 @@ namespace EAP.Entity.Data
             // modelBuilder.ApplyConfiguration(new StudentCastsConfiguration());
             // modelBuilder.ApplyConfiguration(new ReligionsConfiguration());
             // modelBuilder.ApplyConfiguration(new OccupationsConfiguration());
-            // modelBuilder.ApplyConfiguration(new DistrictsConfiguration());
+            modelBuilder.ApplyConfiguration(new DistrictsConfiguration());
             modelBuilder.ApplyConfiguration(new StatesConfiguration());
             modelBuilder.ApplyConfiguration(new CountriesConfiguration());
             // modelBuilder.ApplyConfiguration(new OrganizationTypesConfiguration());

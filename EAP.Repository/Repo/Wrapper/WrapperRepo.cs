@@ -91,7 +91,6 @@ namespace EAP.Repository.Repo.Wrapper
             }
             set => throw new System.NotImplementedException();
         }
-
         public void Save()
         {
             _context.SaveChanges();
