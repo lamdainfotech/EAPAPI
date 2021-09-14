@@ -13,6 +13,7 @@ namespace EAP.Entity.Data
             : base(options)
         {
         }
+        public DbSet<Municipality> Municipalities { get; set; }
         public DbSet<Districts> Districts { get; set; }
         public DbSet<States> States { get; set; }
         public DbSet<Countries> Countries { get; set; }

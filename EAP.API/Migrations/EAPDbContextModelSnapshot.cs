@@ -584,6 +584,30 @@ namespace EAP.API.Migrations
                         });
                 });
 
+            modelBuilder.Entity("EAP.Entity.Models.Address.Municipality", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnName("MunicipalityId")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Code")
+                        .HasMaxLength(2)
+                        .HasColumnType("nvarchar(2)");
+
+                    b.Property<int>("DistrictId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("GPNPName")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Municipalities", "Address");
+                });
+
             modelBuilder.Entity("EAP.Entity.Models.Address.States", b =>
                 {
                     b.Property<int>("Id")

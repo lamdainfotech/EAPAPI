@@ -45,6 +45,7 @@ namespace EAP.API.Extensions
         {
             services.AddScoped<IWrapperRepo, WrapperRepo>();
             services.AddScoped<IDistrictsRepo, DistrictsRepo>();
+            services.AddScoped<IMunicipalitiesRepo, MunicipalitiesRepo>();
         }
     }
 }
