@@ -17,6 +17,8 @@ using EAP.Repository.Repo.LoggerManager;
 using EAP.API.ActionFilter;
 using EAP.Entity.Models.Owners;
 using EAP.Shared.Dtos.Owners;
+using EAP.Shared.SendEmail;
+using Microsoft.AspNetCore.Http.Features;
 
 namespace EAP.API
 {
@@ -41,6 +43,16 @@ namespace EAP.API
             services.AddScoped<ValidationFilterAttribute>();
             services.AddScoped<ValidateEntityExistaAttribute<Owner>>();
 
+            //Email Configuration 
+            var emailConfig = Configuration.GetSection("EmailConfiguration")
+                .Get<EmailConfiguration>();
+            services.AddSingleton(emailConfig);
+            services.Configure<FormOptions>(options =>
+            {
+                options.ValueCountLimit = int.MaxValue;
+                options.MultipartBodyLengthLimit = int.MaxValue;
+                options.MemoryBufferThreshold = int.MaxValue;
+            });
             //Auto Mapper
             services.AddAutoMapper(typeof(Startup));
 

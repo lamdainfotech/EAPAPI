@@ -1,6 +1,8 @@
+using EAP.Contracts.IRepositoty.AddressRepo;
 using EAP.Contracts.IRepositoty.LoggerManager;
 using EAP.Contracts.IRepositoty.Wrapper;
 using EAP.Entity.Data;
+using EAP.Repository.Repo.AddressRepo;
 using EAP.Repository.Repo.LoggerManager;
 using EAP.Repository.Repo.Wrapper;
 using Microsoft.AspNetCore.Builder;
@@ -42,6 +44,8 @@ namespace EAP.API.Extensions
         public static void ConfigureRepoWrapper(this IServiceCollection services)
         {
             services.AddScoped<IWrapperRepo, WrapperRepo>();
+            services.AddScoped<IDistrictsRepo, DistrictsRepo>();
+            services.AddScoped<IMunicipalitiesRepo, MunicipalitiesRepo>();
         }
     }
 }

@@ -35,7 +35,6 @@ namespace EAP.Repository.Repo.BaseRepo
         {
             return _context.Set<T>().Where(expression).AsNoTracking();
         }
-
         public void Update(T entity)
         {
             _context.Set<T>().Update(entity);
