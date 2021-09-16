@@ -1,9 +1,11 @@
 using EAP.Contracts.IRepositoty.AddressRepo;
 using EAP.Contracts.IRepositoty.LoggerManager;
+using EAP.Contracts.IRepositoty.OccupationRepo;
 using EAP.Contracts.IRepositoty.Wrapper;
 using EAP.Entity.Data;
 using EAP.Repository.Repo.AddressRepo;
 using EAP.Repository.Repo.LoggerManager;
+using EAP.Repository.Repo.OccupationRepo;
 using EAP.Repository.Repo.Wrapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
@@ -46,6 +48,7 @@ namespace EAP.API.Extensions
             services.AddScoped<IWrapperRepo, WrapperRepo>();
             services.AddScoped<IDistrictsRepo, DistrictsRepo>();
             services.AddScoped<IMunicipalitiesRepo, MunicipalitiesRepo>();
+            services.AddScoped<IOccupationsRepo, OccupationsRepo>();
         }
     }
 }
