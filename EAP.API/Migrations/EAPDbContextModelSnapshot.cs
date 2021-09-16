@@ -2149,6 +2149,46 @@ namespace EAP.API.Migrations
                             CountryName = "Zimbabwe"
                         });
                 });
+
+            modelBuilder.Entity("EAP.Entity.Models.Occupation.Occupations", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnName("OccupationId")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("OccupationName")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Occupations", "Occupation");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            OccupationName = "Farmer"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            OccupationName = "Government Job"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            OccupationName = "Business"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            OccupationName = "Others"
+                        });
+                });
 #pragma warning restore 612, 618
         }
     }

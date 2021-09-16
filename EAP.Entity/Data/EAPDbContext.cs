@@ -2,6 +2,7 @@ using EAP.Entity.Configurations;
 using EAP.Entity.Models.Accounts;
 using EAP.Entity.Models.Address;
 using EAP.Entity.Models.Country;
+using EAP.Entity.Models.Occupation;
 using EAP.Entity.Models.Owners;
 using Microsoft.EntityFrameworkCore;
 
@@ -13,6 +14,7 @@ namespace EAP.Entity.Data
             : base(options)
         {
         }
+        public DbSet<Occupations> Occupations { get; set; }
         public DbSet<Municipality> Municipalities { get; set; }
         public DbSet<Districts> Districts { get; set; }
         public DbSet<States> States { get; set; }
@@ -26,10 +28,10 @@ namespace EAP.Entity.Data
             // modelBuilder.ApplyConfiguration(new StudentClassesConfiguration());
             // modelBuilder.ApplyConfiguration(new StudentCastsConfiguration());
             // modelBuilder.ApplyConfiguration(new ReligionsConfiguration());
-            // modelBuilder.ApplyConfiguration(new OccupationsConfiguration());
             modelBuilder.ApplyConfiguration(new DistrictsConfiguration());
             modelBuilder.ApplyConfiguration(new StatesConfiguration());
             modelBuilder.ApplyConfiguration(new CountriesConfiguration());
+            modelBuilder.ApplyConfiguration(new OccupationsConfiguration());
             // modelBuilder.ApplyConfiguration(new OrganizationTypesConfiguration());
             // modelBuilder.ApplyConfiguration(new GendersConfiguration());
         }
